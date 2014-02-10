@@ -1,0 +1,15 @@
+{
+	"name":	"hirviid/hirviid-framework-bundle",
+	"description": "Contains helper classes for the symfony2 framework",
+	"type":	"symfony-bundle",
+	"autoload":     {
+        "psr-0": { "Hirviid\\Bundle\\FrameworkBundle": "" }
+    },
+    "target-dir": "Hirviid/Bundle/FrameworkBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        }
+    },
+    "minimum-stability": "dev"
+}
