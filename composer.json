@@ -2,6 +2,14 @@
 	"name":	"hirviid/hirviid-framework-bundle",
 	"description": "Contains helper classes for the symfony2 framework",
 	"type":	"symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Van Gompel",
+            "email": "david@truecolor.be",
+            "role": "Developer"
+        }
+    ],
 	"autoload":     {
         "psr-0": { "Hirviid\\Bundle\\FrameworkBundle": "" }
     },
