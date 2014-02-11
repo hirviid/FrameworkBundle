@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="form_manager.class">Hirviid\Bundle\FrameworkBundle\Form\Manager\FormManager</parameter>
+        <parameter key="form_handler.class">Hirviid\Bundle\FrameworkBundle\Form\Handler\FormHandler</parameter>
+    </parameters>
+
+    <services>
+
+        <service id="form_manager" class="%form_manager.class%">
+            <argument type="service" id="doctrine.orm.default_entity_manager" />
+            <argument type="service" id="event_dispatcher" />
+        </service>
+
+        <service id="form_handler" class="%form_handler.class%" >
+            <argument type="service" id="form_manager" />
+        </service>
+
+    </services>
+</container>
