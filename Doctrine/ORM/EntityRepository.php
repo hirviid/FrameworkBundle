@@ -20,6 +20,18 @@ use Doctrine\ORM\QueryBuilder;
 class EntityRepository extends DoctrineORMEntityRepository
 {
     /**
+     * Returns a new entity instance
+     *
+     * @return object
+     */
+    public function createNew()
+    {
+        $className = $this->getClassName();
+
+        return new $className;
+    }
+
+    /**
      * Select all database rows which have a value from $values in its $column.
      *
      * @param string $column
